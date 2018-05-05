@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-color: #FFD5F9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    font-family: 'Oswald';
+    z-index: 1;
+}
+
+main {
+    height: 100vh;
+    background-color: gray;
+    margin-top: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+header img {
+    position: absolute;
+    bottom: 0;
+    height: 80%;
+    right: -110%;
+
+}
+
+header nav {
+    position: absolute;
+    right: 5%;
+    top: 4%;
+    font-size: 3rem;
+    z-index: 1;
+
+}
+
+header hgroup {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 3rem;
+
+}
+
+header h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#arrow {
+    width: 32px;
+    height: 32px;
+    border: 3px solid black;
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 0 -10px 0 black, 0 -20px 0 black;
+    overflow: hidden;
+    transition: 1s ease;
+
+
+
+}
+
+#arrow:hover {
+    text-shadow: 0 -5px 0 white, 0 -10px 0 white;
+    color: white;
+    border-color: white;
+    background-color: black;
+    cursor: pointer;
+
+}
+
+.fa-angle-down {
+    animation: arrow 1.5s infinite linear;
+
+}
+
+
+/* MEDIA QUERIES*/
+
+@media (orientation: portrait) {
+    h3 span::after {
+        content: '\A';
+        white-space: pre;
+    }
+}
+
+@media (orientation: landscape) {
+    header img {
+        right: -30%;
+    }
+}
+
+@media (min-width: 530px) {
+    header img {
+        height: 95%;
+        right: -40%;
+    }
+    header h1 {
+        font-size: 5rem;
+    }
+    header h3 {
+        font-size: 2.2rem;
+    }
+    header hgroup {
+        top: 5%;
+
+    }
+}
+
+@media (min-width: 530px) and (orientation: portrait) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    header img {
+        height: 80%;
+        right: -100%;
+    }
+    header h1 {
+        font-size: 8rem;
+    }
+    header h3 {
+        font-size: 4rem;
+    }
+    header hgroup {
+        top: 4%;
+
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    header img {
+        height: 90%;
+        right: -60%;
+    }
+    header h1 {
+        font-size: 8rem;
+    }
+    header h3 {
+        font-size: 3.5rem;
+    }
+    header hgroup {
+        top: 4%;
+
+    }
+
+    @media (min-width: 1024px) and (orientation: portrait) {}
+
+    @media (min-width: 1280px) {}
+
+    @media (min-width: 1280px) and (orientation: portrait) {}
+
+    @media (min-width: 1600px) {}
+
+    @media (min-width: 1600px) and (orientation: portrait) {}
+
+    @media (max-width: 320px) and (orientation: portrait) {
+        header h3 {
+            font-size: 2.4rem;
+        }
+    }
+
+    /* ANIMACJE CSS */
+    @keyframes arrow {
+        0% {
+            transform: translateY(-60px)
+        }
+        50% {
+            transform: translateY(0px)
+        }
+        100% {
+            transform: translateY(60px)
+        }
+    }
